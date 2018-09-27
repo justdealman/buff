@@ -229,7 +229,7 @@ $(function () {
 			'background-size': 'contain'
 		});
 	});
-	if ( $('.facts').length ) {
+	if ( $('.facts').length && $('title').text().indexOf('Новости') == 0 ) {
 		$('.page-main').addClass('page-main_news');
 	}
 });
