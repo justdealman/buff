@@ -1,5 +1,57 @@
 @charset "utf-8";
 
+@media (min-width: 1402px) and (max-width: 1439px) {
+	.slider-responses {
+		overflow-y:auto !important;
+		max-height:215px;
+	}
+	.slider-responses .response__text {
+		font-size:16px !important;
+		margin-bottom:25px !important;
+	}
+	.section__inner {
+		margin-left:-40px !important;
+	}
+}
+.marginBlya {
+	left:auto !important;
+}
+
+.modal-backdrop.fade.in {
+	z-index:5 !important;
+}
+.nav-header__special {
+	white-space:nowrap;
+}
+.header__nav .icon-book {
+	vertical-align:top !important;
+	margin:-7px 0 -6px;
+}
+
+@media (max-width: 354px) {
+	.top-menu {
+		height:auto !important;
+		padding:10px 0 15px !important;
+	}
+}
+
+@media (max-width: 425px) {
+	.cart-contacts {
+		padding:0 20px;
+	}
+	.cart-section {
+		border-left-width:0 !important;
+		border-right-width:0 !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.slider-responses {
+		max-height:250px !important;
+		margin-right:-20px !important;
+	}
+}
+
 
 @media (max-width: 3200px) and (min-width: 1200px) {
   .card.cart_video_main.card--simple.simp1, .card.cart_video_main.card--simple.simp2 {
@@ -78,8 +130,28 @@
 }
 
 .page-main .col-9 {
+	width:100% !important;
+}
+.page-main_news .col-9 {
+	width: 90% !important;
+}
 
-  width: 100%!important;
+@media (min-width: 992px) {
+	.page-main_news .col-9 {
+	  width: calc(100% - 150px - 30px) !important;
+	}
+	.page-main_news .col-1 {
+		width: calc(150px) !important;
+		margin-right:30px;
+	}
+}
+@media (min-width: 1367px) {
+	.page-main_news .col-9 {
+	  width: calc(100% - 150px);
+	}
+	.page-main_news .col-1 {
+		margin-right:0;
+	}
 }
 
 .article__image a {
@@ -93,16 +165,22 @@
 
 .article .article__image {
    display: table!important;
+	max-width:300px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.article__title {
+	text-align:center;
 }
 
 .article__image a img {
-
+	
+	display:none !important;
 
 
 }
 
 .article__image {
- 
     width: 100%!important;
     height: 250px!important;
     display: block!important;
@@ -468,7 +546,7 @@
   font-weight: 300;
   font-style: italic;
 }
-.sticker__logo
+
 @font-face {
   font-family: 'Roboto';
   src: url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
@@ -779,6 +857,7 @@ body {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.3;
+  overflow-x: hidden;
 }
 
 .container {
@@ -2602,7 +2681,7 @@ textarea.form-control {
   padding: 40px 45px 40px 50px;
   height: 100%;
   background-color: #333333;
-  z-index: 1;
+  z-index: 10 !important;
 }
 
 @media (max-width: 1230px) {
@@ -3303,7 +3382,7 @@ textarea.form-control {
 .article__image a {
   border-bottom: 0;
   display:block;
-  /*margin-bottom: -4px !important;*/
+  /*margin-bottom: -4px !important;*/
 }
 
 .article__inner {
@@ -4767,7 +4846,7 @@ textarea.form-control {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1000 !important;
   -webkit-overflow-scrolling: touch;
   outline: 0;
   z-index: 1300;
@@ -5624,7 +5703,6 @@ textarea.form-control {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-direction: col;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-top: 50px;
@@ -5637,12 +5715,10 @@ textarea.form-control {
     margin-bottom: 60px!important;
     padding-right: 0px!important;
 }
-}
 .icon-book{
 	display: none;
 }
 }
-
 
 .nav-header__special:hover {
   color: #c59708;
@@ -6393,7 +6469,7 @@ h2{
     padding: 20px 31px 18px 39px;
     height: 100%;
     background-color: #333333;
-    z-index: 1;
+    z-index: 10;
 }
 
 .slider-home__image {
@@ -6609,9 +6685,7 @@ h2{
     align-items: center;
 }
 
-.cart-products__quantity{
-  display: 
-}
+
 .cart-products__cell {
     padding: 15px;
     width: 50%;
@@ -6747,7 +6821,7 @@ h2{
 .bottom-menu {
     background: #000000;
     text-align: center;
- www   color: #ffffff;
+	color: #ffffff;
     height: 70px;
     padding-top: 25px;
     line-height: 0px;
@@ -7301,7 +7375,7 @@ line-height: 50px;
 }
 }
 
-.nav-main__text
+
 @media (max-width: 859px){
 .document-list {
     display: -webkit-box;
@@ -7683,7 +7757,8 @@ body {
     opacity: 0;
     border-color: #ffffff;
     background-color: transparent;
-}}
+}
+}
 
 @media (max-width: 767px){
 .card__cart {
@@ -7696,7 +7771,8 @@ body {
     opacity: 0;
     border-color: #ffffff;
     background-color: transparent;
-}}
+}
+}
 
 @media (max-width: 591px){
     .card__cart {
@@ -7812,5 +7888,3 @@ body {
     /*width: 225px !important;
     height: 83px !important;*/
 }
-
-

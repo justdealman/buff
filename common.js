@@ -219,3 +219,17 @@ $(function () {
     }
 
 });*/
+
+$(function () {
+	$('.article .article__image img').each(function() {
+		$(this).parent().css({
+			'background-image': 'url("'+$(this).attr('src')+'")',
+			'background-repeat': 'no-repeat',
+			'background-position': '50% 50%',
+			'background-size': 'contain'
+		});
+	});
+	if ( $('.facts').length ) {
+		$('.page-main').addClass('page-main_news');
+	}
+});
