@@ -104,7 +104,7 @@
 @media (max-width: 1074px) {
 	.add_basket_element_cust,
 	.button.button-fourth.product__cart.add_basket_element {
-		font-size:11px !important;
+		font-size:13px !important;
 	}
 }
 @media (min-width: 1230px) {
@@ -172,6 +172,43 @@
 	.page-columns-bib-cust {
 		padding-right:20px;
 	}
+	.contacts__text .text-large {
+		font-size:24px;
+		text-align:left;
+	}
+	.contacts__phone,
+	.contacts__email {
+		margin-left:0 !important;
+	}
+	.contacts__phone .text-large {
+		font-size:22px;
+	}
+	.bx-pagination {
+		margin:0 0 30px !important;
+	}
+	.bx-pagination .bx-pagination-container ul li {
+		padding-left:0 !important;
+	}
+	.page-main_elem .product__title {
+		width:auto !important;
+		font-size:20px;
+	}
+	.card__title {
+		float:none;
+	}
+	.card__cart {
+		position:static !important;
+		width:180px !important;
+		height:42px !important;
+		font-size:13px !important;
+		margin:-48px auto 20px !important;
+		transform:none !important;
+	}
+	.form-group select,
+	.form-group input,
+	.form-group textarea {
+		font-size:16px !important;
+	}
 }
 @media (max-width: 425px) {
 	.page-columns-bib-cust {
@@ -193,6 +230,12 @@
 	margin-left:auto;
 	margin-right:auto;
 }
+.form-banquet__content {
+	position:relative;
+}
+
+
+
 
 @media (max-width: 3200px) and (min-width: 1200px) {
   .card.cart_video_main.card--simple.simp1, .card.cart_video_main.card--simple.simp2 {
@@ -223,13 +266,8 @@
         margin-left: 0px!important;
    }
 
-   .button.button-fourth.product__cart.add_basket_element {
-
-    display: block!important;
-   }
 
 .product__quantity {
-  display: block!important;
   margin-bottom: 30px;
     margin-top: 30px;
 }
@@ -7551,12 +7589,10 @@ line-height: 50px;
 .nav {
     /*  ширна произвольная, не стесняйтесь экспериментировать */
     width: 100%;
-    min-width: 100%;
     /* фиксируем и выставляем высоту панели на максимум */
     height: 100%;
     position: fixed;
     top: 0;
-    bottom: 0;
     margin: 0;
     /* сдвигаем (прячем) панель относительно правого края страницы */
     right: -100%;

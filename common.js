@@ -231,6 +231,8 @@ $(function () {
 	});
 	if ( $('.facts').length && $('title').text().indexOf('Новости') == 0 ) {
 		$('.page-main').addClass('page-main_news');
+	} else {
+		$('.facts').remove();
 	}
 	
 	var isMobile = false;
@@ -248,22 +250,44 @@ $(function () {
 			justSwitched = true;
 		}
 	}
+	function banquetGrid() {
+		setTimeout(function() {
+			$('.form-banquet__column').eq(0).css({
+				'-webkit-transform': 'translateY(0)',
+				'transform': 'translateY(0)'
+			})
+			var base = $('.form-banquet__column').eq(1).find('.form-group:last-child').offset().top;
+			var first = $('.form-banquet__column').eq(0).find('.form-group:last-child').offset().top;
+			var diff = base-first;
+			console.log(first,base,diff);
+			if ( Modernizr.mq('(min-width:975px)') ) {
+				$('.form-banquet__column').eq(0).css({
+					'-webkit-transform': 'translateY('+diff+'px)',
+					'transform': 'translateY('+diff+'px)'
+				});
+			}
+		}, 100);
+	}
+	if ( $('.form-banquet__content').length ) {
+		banquetGrid();
+	}
 	function startApp() {
 		detectDevice();
 		if ( justSwitched ) {
 			if ( isMobile ) {
 				if ( !$('.page-index').length ) {
-					console.log('inner mobile');
-					$('.top-header .header__cart').detach().prependTo($('.top-header'));
+					$('.top-header .header__cart').clone().prependTo($('.top-header'));
 					$('.top-header .header__profile').addClass('is-centered');
 				}
 			} else {
 				if ( !$('.page-index').length ) {
-					console.log('inner desktop');
-					$('.top-header .header__cart').detach().prependTo($('.top-header .header__actions'));
+					$('.top-header .header__cart').remove();
 					$('.top-header .header__profile').removeClass('is-centered');
 				}
 			}
+		}
+		if ( $('.form-banquet__content').length ) {
+			banquetGrid();
 		}
 	}
 	startApp();
