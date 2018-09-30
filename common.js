@@ -232,4 +232,46 @@ $(function () {
 	if ( $('.facts').length && $('title').text().indexOf('Новости') == 0 ) {
 		$('.page-main').addClass('page-main_news');
 	}
+	
+	var isMobile = false;
+	var justSwitched = false;
+	function detectDevice() {
+		var temp = isMobile;
+		if ( Modernizr.mq('(max-width:940px)') ) {
+			isMobile = true;
+		} else {
+			isMobile = false;
+		}
+		if ( temp == isMobile ) {
+			justSwitched = false;
+		} else {
+			justSwitched = true;
+		}
+	}
+	function startApp() {
+		detectDevice();
+		if ( justSwitched ) {
+			if ( isMobile ) {
+				if ( !$('.page-index').length ) {
+					console.log('inner mobile');
+					$('.top-header .header__cart').detach().prependTo($('.top-header'));
+					$('.top-header .header__profile').addClass('is-centered');
+				}
+			} else {
+				if ( !$('.page-index').length ) {
+					console.log('inner desktop');
+					$('.top-header .header__cart').detach().prependTo($('.top-header .header__actions'));
+					$('.top-header .header__profile').removeClass('is-centered');
+				}
+			}
+		}
+	}
+	startApp();
+	var lastWidth = $(window).width();
+	$(window).on('resize', _.debounce(function() {
+		if ( $(window).width() != lastWidth ) {
+			startApp();
+			lastWidth = $(window).width();
+		}
+	}, 100));
 });

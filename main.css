@@ -117,6 +117,9 @@
 		margin-left:auto;
 		margin-right:auto;
 	}
+	.row {
+		justify-content:center;
+	}
 }
 
 .contacts .col-4 .section {
@@ -137,6 +140,58 @@
 }
 .contacts__phone {
 	font-family:"PT Serif", Georgia, sans-serif;
+}
+@media (max-width: 1024px) {
+	body {
+		width:100%;
+	}
+}
+@media (max-width: 940px) {
+	.top-header > .header__cart {
+		position:absolute;
+		right:30px;
+		top:0;
+	}
+	.top-header > .header__cart img {
+		width:28px;
+		height:auto;
+		vertical-align:top;
+		margin-top:1px;
+	}
+	.bx_page {
+		padding:0 20px;
+	}
+	.content > .row > .col-xs-12 {
+		padding-top:15px;
+		padding-bottom:15px;
+	}
+	.content > .row > .col-xs-12 > p {
+		margin-left:20px;
+		margin-right:20px;
+	}
+	.page-columns-bib-cust {
+		padding-right:20px;
+	}
+}
+@media (max-width: 425px) {
+	.page-columns-bib-cust {
+		padding-left:20px;
+	}
+}
+.header__profile.is-centered {
+	margin-left:0 !important;
+}
+.card__cart {
+	opacity:1 !important;
+}
+.notify {
+	z-index:100 !important;
+	pointer-events:none;
+}
+.col-3 .h4.section__title {
+	max-width:300px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 @media (max-width: 3200px) and (min-width: 1200px) {
@@ -229,6 +284,11 @@
 	.page-main_news .col-1 {
 		width: calc(150px) !important;
 		margin-right:30px;
+	}
+}
+@media (max-width: 991px) {
+	.page-main_news .col-9 {
+		width: 100% !important;
 	}
 }
 @media (min-width: 1367px) {
